@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>password Generator</h1>
+      <h1>Password Generator</h1>
 
       <div class="display-container">
         <input
@@ -18,9 +18,52 @@
           data-passwordDisplay
         />
         <button>
-          <span></span>
+          <span data-copyMsg></span>
+          <img src="copy.svg" alt="copy" width="23" height="23" />
         </button>
       </div>
+      <div class="input-container">
+        <!--Password length container-->
+        <div class="length-container">
+          <p>Password Length</p>
+          <p data-lengthNumber>0</p>
+        </div>
+        <!--slider-->
+        <input
+          type="range"
+          class="slider"
+          min="1"
+          max="20"
+          step="1"
+          data-lengthSlider
+        />
+        <!--checkboxs-->
+        <div>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include uppercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include lowercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include numbers</label>
+        </div>
+         <div>
+          <input type="checkbox" id="numbers" />
+          <label for="symbols">Include symbols</label>
+        </div>
+          <!--Strength Section-->
+          <div class="strength-container">
+            <p>Strength</p>
+            <div data-indicator></div>
+          </div>
+          <!--Generate Password-->
+          <button class="generateButton">Generate Button</button>
+        </div>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
